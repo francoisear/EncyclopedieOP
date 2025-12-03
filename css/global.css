@@ -1,0 +1,62 @@
+/* --- STYLE DE LA ZONE PRINCIPALE (MAIN) --- */
+
+main {
+    /* Marge extérieure en haut et en bas pour l'espacement */
+    margin: 40px auto; 
+    /* Limite la largeur du contenu (une bonne pratique pour la lecture) */
+    max-width: 800px; 
+    /* Ajoute une marge intérieure pour que le contenu ne colle pas aux bords */
+    padding: 20px; 
+    /* Utilise Flexbox pour centrer facilement le contenu enfant si nécessaire */
+    display: flex;
+    flex-direction: column; 
+    /* Petite ombre subtile pour donner de la profondeur */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); 
+}
+
+/* --- STYLE DU PARAGRAPHE D'INTRODUCTION --- */
+
+main p {
+    /* Utilisation d'une couleur de fond claire pour l'effet "papier" ou "parchemin" */
+    background-color: #fff8e1; /* Un jaune/crème doux */
+    /* Remettre le texte en noir pour un contraste maximal sur le papier */
+    color: #333; 
+    /* Espacement intérieur pour que le texte ne touche pas le bord */
+    padding: 30px; 
+    /* Bordure légèrement vieillie/irrégulière */
+    border: 1px solid #d2b48c; 
+    /* Change la police pour une police plus "manuscrite" si elle est disponible */
+    font-family: 'Times New Roman', serif;
+    font-size: 1.1em;
+    line-height: 1.6; /* Améliore la lisibilité */
+    /* Petite rotation ou effet pour un look "parchemin roulé" */
+    transform: rotate(0.5deg);
+    
+    /* Retire la marge par défaut pour qu'il soit bien contenu dans le MAIN */
+    margin: 0;
+}
+
+/* --- STYLE DU FOOTER --- */
+
+footer {
+    /* Le placer en bas de la fenêtre grâce à la hauteur min-height du body */
+    margin-top: auto; 
+    /* Couleur de fond discrète */
+    background-color: #0d0d0d;
+    /* Marge intérieure pour le rendre moins écrasé */
+    padding: 10px 20px; 
+    /* Centrer le texte pour la propreté */
+    text-align: center; 
+    /* Police et couleur */
+    font-size: 0.85em;
+    color: #777;
+}
+
+footer a {
+    color: #ffb300; /* Rappel de la couleur dorée du titre H1 */
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #fff;
+}
