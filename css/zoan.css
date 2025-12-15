@@ -1,22 +1,97 @@
+/* Page entière centrée verticalement et horizontalement */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: Arial, sans-serif;
+    background-color: #fff;
+    color: #333;
+}
+
+.page-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* centre verticalement le contenu principal */
+    align-items: center;     /* centre horizontalement */
+    min-height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.container {
+    text-align: center;
+    max-width: 900px;
+}
+
+/* Titre */
+h1 {
+    font-size: 3rem;
+    margin-bottom: 40px;
+    letter-spacing: 2px;
+    font-weight: bold;
+    color: #222;
+}
+
+/* Liste des fruits */
+.fruit-list {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto 40px auto;
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
 .fruit {
-  display: flex;
-  align-items: center;   /* aligne verticalement */
-  gap: 15px;             /* espace image / texte */
-  margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 180px;
 }
 
 .fruit img {
-  width: 60px;           /* 🔽 taille réduite */
-  height: auto;
+    width: 150px;
+    height: auto;
+    margin-bottom: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 .fruit a {
-  font-size: 18px;
-  text-decoration: none;
-  color: #4b0082;
+    text-decoration: none;
+    color: #6a2bd9;
+    font-weight: 600;
+    font-size: 1.1rem;
+    transition: color 0.3s ease;
 }
 
-.fruit:hover {
-  background-color: #f0f0f0;
-  border-radius: 8px;
+.fruit a:hover {
+    color: #9333ea;
+}
+
+/* Texte descriptif */
+.description {
+    max-width: 700px;
+    margin: 0 auto 40px auto;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #555;
+}
+
+/* Footer centré */
+.footer {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.footer a {
+    text-decoration: none;
+    color: #444;
+    font-size: 1rem;
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: #6a2bd9;
 }
