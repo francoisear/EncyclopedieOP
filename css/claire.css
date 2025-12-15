@@ -1,3 +1,5 @@
 body {
-    background-image: url('sdsfhg');
+    background-image: url("../image/mode_claire/one_piece_boat.jpg");
+    background-position: center center;
+    background-attachment: scroll;
 }
