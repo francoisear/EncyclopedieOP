@@ -11,7 +11,7 @@
     }
 
     themelink.setAttribute('href', newTheme);
-}); Laisse le commentaire*/
+}); LAISSE LE COMMENTAIRE */
 
 document.querySelector('#themeselector').addEventListener('click', () => {
     let themelink = document.querySelector('#themelink');
