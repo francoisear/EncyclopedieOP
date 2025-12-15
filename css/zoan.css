@@ -1,97 +1,91 @@
-/* Page entière centrée verticalement et horizontalement */
-body, html {
+/* RESET */
+* {
     margin: 0;
     padding: 0;
-    height: 100%;
-    font-family: Arial, sans-serif;
-    background-color: #fff;
-    color: #333;
-}
-
-.page-container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center; /* centre verticalement le contenu principal */
-    align-items: center;     /* centre horizontalement */
-    min-height: 100vh;
-    padding: 20px;
     box-sizing: border-box;
 }
 
+/* PAGE */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #ffffff;
+    color: #333;
+}
+
+/* CONTENEUR GLOBAL */
+.page-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* CONTENU */
 .container {
+    max-width: 1100px;
+    margin: 40px auto;
     text-align: center;
-    max-width: 900px;
 }
 
-/* Titre */
+/* TITRE */
 h1 {
-    font-size: 3rem;
+    font-size: 48px;
     margin-bottom: 40px;
-    letter-spacing: 2px;
-    font-weight: bold;
-    color: #222;
 }
 
-/* Liste des fruits */
+/* LISTE DES FRUITS */
 .fruit-list {
-    list-style: none;
-    padding: 0;
-    margin: 0 auto 40px auto;
+    list-style: none; /* SUPPRIME 1. 2. 3. */
     display: flex;
     justify-content: center;
-    gap: 50px;
-    flex-wrap: wrap;
+    gap: 80px;
+    margin-bottom: 40px;
 }
 
+/* FRUIT */
 .fruit {
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 180px;
 }
 
+/* IMAGE */
 .fruit img {
-    width: 150px;
+    width: 160px;
     height: auto;
-    margin-bottom: 15px;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    margin-bottom: 10px;
 }
 
+/* LIEN */
 .fruit a {
-    text-decoration: none;
-    color: #6a2bd9;
+    color: #6a4cff;
     font-weight: 600;
-    font-size: 1.1rem;
-    transition: color 0.3s ease;
+    text-decoration: none;
 }
 
 .fruit a:hover {
-    color: #9333ea;
+    text-decoration: underline;
 }
 
-/* Texte descriptif */
+/* DESCRIPTION */
 .description {
-    max-width: 700px;
-    margin: 0 auto 40px auto;
-    font-size: 1.1rem;
+    max-width: 800px;
+    margin: 0 auto;
     line-height: 1.6;
     color: #555;
 }
 
-/* Footer centré */
+/* FOOTER */
 .footer {
     text-align: center;
-    margin-top: 20px;
+    padding-bottom: 20px;
 }
 
 .footer a {
+    color: #333;
     text-decoration: none;
-    color: #444;
-    font-size: 1rem;
-    transition: color 0.3s ease;
 }
 
 .footer a:hover {
-    color: #6a2bd9;
+    text-decoration: underline;
 }
