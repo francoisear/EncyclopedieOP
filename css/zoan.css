@@ -1,11 +1,22 @@
-.zoan-title {
-  text-align: center;
+.fruit {
+  display: flex;
+  align-items: center;   /* aligne verticalement */
+  gap: 15px;             /* espace image / texte */
+  margin-bottom: 15px;
 }
 
+.fruit img {
+  width: 60px;           /* 🔽 taille réduite */
+  height: auto;
+}
 
-body {
-  background-image: url("https://images6.alphacoders.com/911/thumb-1920-911401.jpg");
-  background-size: cover;     
-  background-repeat: no-repeat;
-  background-position: center;
+.fruit a {
+  font-size: 18px;
+  text-decoration: none;
+  color: #4b0082;
+}
+
+.fruit:hover {
+  background-color: #f0f0f0;
+  border-radius: 8px;
 }
