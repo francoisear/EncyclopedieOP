@@ -1,4 +1,4 @@
-/* ===== RESET ===== */
+
 * {
   margin: 0;
   padding: 0;
@@ -6,7 +6,6 @@
   font-family: "Georgia", serif;
 }
 
-/* ===== FOND ===== */
 body {
   min-height: 100vh;
   background: url("../image/fond.jpg") center / cover no-repeat fixed;
@@ -16,7 +15,6 @@ body {
   color: white;
 }
 
-/* ===== CONTAINER PRINCIPAL ===== */
 .page-container {
   width: 100%;
   min-height: 100vh;
@@ -31,7 +29,7 @@ body {
   padding: 40px 20px;
 }
 
-/* ===== TITRE ===== */
+
 h1 {
   font-size: 4rem;
   letter-spacing: 6px;
@@ -39,7 +37,7 @@ h1 {
   text-transform: uppercase;
 }
 
-/* ===== LISTE DES FRUITS ===== */
+
 .fruit-list {
   list-style: none;
   display: flex;
