@@ -1,13 +1,14 @@
 
 main {
     max-width: 1400px;
-    margin: 0 auto;
-    padding: 20px;
+    margin: auto;
+    padding: 30px;
 }
 
 h1 {
    text-align: center;
    font-family: 'Inter', sans-serif;
+   font-size: 100px;
 }
 
 .textGomu {
@@ -25,35 +26,68 @@ h1 {
    font-family: 'Inter', sans-serif;
 }
 
+a {
+    text-decoration: none;
+}
+
+a:visited {
+    color: #000000; 
+    text-decoration: none;
+}
+
 ol {
-    list-style-type: none; /* Supprime les chiffres */
+    list-style-type: none; 
     padding-left: 0;
-    
-    /* FLEXBOX pour la disposition horizontale */
+
     display: flex;
-    justify-content: center; /* Centre le groupe */
-    gap: 50px;               /* Espace entre les fruits */
-    flex-wrap: wrap;         /* Pour le responsive : permet de passer à la ligne */
+    justify-content: center; 
+    gap: 120px;
+    flex-wrap: wrap;         
 }
 
 ol li {
-    /* FLEXBOX pour disposer image et texte verticalement */
-    display: flex;
-    flex-direction: column; 
-    align-items: center;    /* Centre l'image et le texte verticalement */
-    margin: 20px;
+   
+    margin: 40px;
     max-width: 250px;
 }
 
 ol li img {
-    /* Optionnel : Ajuste la taille de l'image si besoin, mais max-width: 100% est clé */
+
     max-width: 100%;
     height: auto;
+    transition: transform 0.3s ease-in-out;
 }
 
 ol li a {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
     text-decoration: none;
-    color:black; /* Exemple de couleur claire */
-    margin-top: 10px;
+    color:black; 
+    height: 100%;
+    width: 100%;
+}
+
+ol li span {
     font-size: 1.2rem;
+    margin-top: 15px;
+}
+
+
+ol li:hover img {
+    
+    transform: scale(1.2); 
+}
+
+p {
+    margin-bottom: 200px ;
+    font-size: 15px;
+    font-family: 'Inter';
+
+}
+
+footer {
+
+    margin-top: 10px;
+    font-size: 40px; 
 }
