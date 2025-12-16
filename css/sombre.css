@@ -1,3 +1,10 @@
-body {
-    background-image: url('autre fdfgdsgdf');
+html, body {
+    background-image: url("../image/mode_sombre/one_piece_boat_dark\(1\).jpg");
+    background-position: center center;
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+    height: 100%;
+
 }
