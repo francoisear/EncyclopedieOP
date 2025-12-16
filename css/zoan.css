@@ -31,7 +31,7 @@ body {
   padding: 40px 20px;
 }
 
-/* ===== TITRE ===== */
+
 h1 {
   font-size: 4rem;
   letter-spacing: 6px;
@@ -39,7 +39,7 @@ h1 {
   text-transform: uppercase;
 }
 
-/* ===== LISTE DES FRUITS ===== */
+
 .fruit-list {
   list-style: none;
   display: flex;
