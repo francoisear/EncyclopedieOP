@@ -1,0 +1,31 @@
+@media (max-width: 1024px) {
+    header h1 {
+        font-size: 2rem;
+    }
+    nav ol {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 16px;
+    }
+    main p {
+        padding: 15px;
+        line-height: 1.5;
+    }
+    button#themeselector {
+        width: 100%;
+        padding: 12px;
+    }
+    nav ol {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        align-items: center;
+    }
+    nav li {
+        margin: 5px 0;
+    }
+}
