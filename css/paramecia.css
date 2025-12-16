@@ -1,4 +1,59 @@
+
+main {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
 h1 {
    text-align: center;
    font-family: 'Inter', sans-serif;
+}
+
+.textGomu {
+   font-size: 30px;
+   font-family: 'Inter', sans-serif;
+}
+
+.textOpe {
+   font-size: 30px;
+   font-family: 'Inter', sans-serif;
+}
+
+.textBeta {
+   font-size: 30px;
+   font-family: 'Inter', sans-serif;
+}
+
+ol {
+    list-style-type: none; /* Supprime les chiffres */
+    padding-left: 0;
+    
+    /* FLEXBOX pour la disposition horizontale */
+    display: flex;
+    justify-content: center; /* Centre le groupe */
+    gap: 50px;               /* Espace entre les fruits */
+    flex-wrap: wrap;         /* Pour le responsive : permet de passer à la ligne */
+}
+
+ol li {
+    /* FLEXBOX pour disposer image et texte verticalement */
+    display: flex;
+    flex-direction: column; 
+    align-items: center;    /* Centre l'image et le texte verticalement */
+    margin: 20px;
+    max-width: 250px;
+}
+
+ol li img {
+    /* Optionnel : Ajuste la taille de l'image si besoin, mais max-width: 100% est clé */
+    max-width: 100%;
+    height: auto;
+}
+
+ol li a {
+    text-decoration: none;
+    color:black; /* Exemple de couleur claire */
+    margin-top: 10px;
+    font-size: 1.2rem;
 }
