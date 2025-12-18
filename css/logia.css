@@ -1,63 +1,163 @@
 
 main {
-    max-width: 1400px;
+    max-width: 1200px;
     margin: auto;
-    padding: 30px;
+    padding: 1em;
 }
+
+
 h1 {
     text-align: center;
     font-family: 'Inter', sans-serif;
     font-size: 100px;
-    margin-bottom: 60px;
+    font-weight: 900;
+    color: #ffffff;
 }
+
+
+.textGomu, .textOpe, .textBeta {
+    font-size: 24px;
+    font-family: 'Inter', sans-serif;
+    display: block;
+    margin-top: 15px;
+    font-weight: 300;
+    color: #ffffff;
+}
+
+
 a {
     text-decoration: none;
 }
-a:visited {
-    color: black;
-}
-ol {
-    list-style: none;
-    padding: 0;
 
+a:visited {
+    color: #ffffff; 
+    text-decoration: none;
+}
+
+
+ol {
+    list-style-type: none; 
+    padding-left: 0;
     display: flex;
-    justify-content: center;
+    justify-content: center; 
     gap: 120px;
     flex-wrap: wrap;
+    margin-bottom: 50px;         
 }
+
 ol li {
-    margin: 40px;
+    margin: 20px;
     max-width: 250px;
+    text-align: center;
 }
-ol li a {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    color: black;
-    height: 100%;
-}
+
 ol li img {
     max-width: 100%;
     height: auto;
     transition: transform 0.3s ease-in-out;
 }
+
+ol li a {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    text-decoration: none;
+    color:black; 
+    height: 100%;
+    width: 100%;
+}
+
 ol li span {
     font-size: 1.2rem;
     margin-top: 15px;
-    font-family: 'Inter', sans-serif;
 }
+
 ol li:hover img {
-    transform: scale(1.2);
+    transform: scale(1.2); 
 }
-p {
-    margin-top: 80px;
-    margin-bottom: 200px;
-    font-size: 15px;
-    font-family: 'Inter', sans-serif;
-    text-align: center;
+
+
+.parchemin {
+    position: relative; 
+    max-width: 1000px;
+    margin: 40px auto;
 }
+
+.papier {
+    width: 100%; 
+    height: auto; 
+    display: block;
+}
+
+.Description {
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center; 
+    align-items: center;    
+    font-family: 'Dancing Script', 'Reenie Beanie', cursive; 
+    font-size: 26px; 
+    line-height: 1.4;
+    color: #1a1a1a;
+    padding: 40px 80px; 
+    box-sizing: border-box;
+    text-align: center; 
+}
+
+
 footer {
+    font-size: 40px; 
+    font-family: 'Inter', sans-serif;
+    color: #ffffff;
+    padding: 20px;
+}
+
+footer a {
+    font-family: 'Inter', sans-serif;
+    font-size: 24px;
+    color: #ffffff;
+    text-decoration: none;
+    opacity: 0.8;
+    transition: 0.3s;
+}
+
+footer a:hover {
+    opacity: 1;
+    padding-left: 10px;
+}
+
+
+.hamburger {
+    cursor: pointer;
+    display: inline-block;
+    margin: 20px;
+}
+
+.hamburger span {
+    display: block;
+    width: 30px;
+    height: 4px;
+    background: #ffffff;
+    margin: 5px 0;
+    transition: 0.3s;
+}
+
+.menu {
+    display: none;
+    flex-direction: column;
+    align-items: center;
     margin-top: 10px;
-    font-size: 40px;
-    text-align: center;
+}
+
+.menu a {
+    color: #ffffff;
+    text-decoration: none;
+    margin: 10px 0;
+}
+
+.menu a:hover {
+    text-decoration: underline;
 }
