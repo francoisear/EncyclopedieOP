@@ -8,3 +8,26 @@ html, body {
     height: 100%;
 
 }
+
+
+
+/* Titre principal en jaune doré (style One Piece) */
+h1 {
+    color: #ffcc00;
+    text-shadow: 2px 2px 4px #000000;
+    text-align: center;
+    font-size: 3rem;
+}
+
+/* Texte des descriptions */
+p.Description, p {
+    color: #e0e0e0;
+    text-align: center;
+    font-size: x-large;
+}
+
+/* Texte sous les fruits (Gomu, Ope, etc.) */
+.text, .text, .text {
+    color: #ffcc00; /* Jaune pour faire ressortir les noms */
+    font-weight: bold;
+}
