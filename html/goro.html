@@ -1,42 +1,57 @@
 <!DOCTYPE html>
 <html lang="fr">
-        <head>
-                <link rel="icon" href="../image/Logo.png">
-                <meta name="viewport" content="width=device-width, initial-scale=1.0">
-                <link rel="stylesheet" href="../css/claire.css" id="themelink">
-                <link rel="stylesheet" href="../css/global.css">
-                <title> Goro Goro No Mi </title>
-                <meta charset="utf-8">
-        </head>
-        <body>
-                <header>
-                        <button id="themeselector" class="light-theme" type="button"> thème claire</button>
-                </header>
-        <main>           
-                <img src="../image/logia/goro-removebg-preview.png" width="400" height="400">
-                <h1> Goro Goro No Mi </h1>
-    
-                <p>
-                        Le Goro Goro no Mi, ce fichu Fruit du Démon d’la trempe des Logia, permet à qui l’a de créer, contrôler et se transformer en éclairs et foudre à 
-                        volonté, arrr ! À l’heure qu’il est, c’est le terrifiant Enel, qui se prend pour un dieu de malheur, qui le brandit. Quant aux anciens détenteurs… personne 
-                        n’en sait rien, et depuis, plus une nouvelle de ce foutu Enel ! Arrr, que les vents maudits le guettent, vieux loup !
-                </p>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/claire.css" id="themelink">
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/hito.css"> <!-- Assurez-vous que le fichier CSS existe et correspond à ce que vous voulez -->
+    <title>Goro Goro No Mi</title>
+    <meta charset="utf-8">
+</head>
+<body>
+    <header>
+        <button id="themeselector" class="light-theme" type="button">Thème claire</button>
+        <h1>Goro Goro No Mi</h1>
+    </header>
 
-                <div class="hamburger" onclick="toggleMenu()">
-                        <span></span>
-                        <span></span>
-                        <span></span>
-                </div>
-                <nav class="menu" id="menu">
-                        <a href="../html/logia.html">LOGIA</a>
-                        <a href="../html/paramecia.html">PARAMECIA</a>
-                        <a href="../html/zoan.html">ZOAN</a>
-                </nav>
+    <main>
+        <!-- BOUTON HAMBURGER -->
+        <input type="checkbox" id="menu_toggle" style="display:none;" />
+        <label class="hamburger" for="menu_toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
 
-        </main>
-        <footer>
-            <a href="../html/logia.html"> Retour</a>
-        </footer>
-        <script src="../js/index.js"></script>
-     </body>
+        <!-- MENU -->
+        <nav class="menu" id="menu">
+            <a href="../html/logia.html">LOGIA</a>
+            <a href="../html/paramecia.html">PARAMECIA</a>
+            <a href="../html/zoan.html">ZOAN</a>
+        </nav>
+
+        <!-- Image du fruit -->
+        <div class="fruit-image">
+            <img src="../image/logia/goro-removebg-preview.png" alt="Goro Goro No Mi" width="400" height="400">
+        </div>
+
+        <!-- Parchemin avec la description -->
+        <div class="parchemin">
+            <img class="papier" src="../image/paramecia/Papier.png" alt="parchemin">
+            <p class="description">
+                Le Goro Goro no Mi, ce fichu Fruit du Démon d’la trempe des Logia, permet à qui l’a de créer, contrôler et se transformer en éclairs et foudre à volonté, arrr ! À l’heure qu’il est, c’est le terrifiant Enel, qui se prend pour un dieu de malheur, qui le brandit. Quant aux anciens détenteurs… personne n’en sait rien, et depuis, plus une nouvelle de ce foutu Enel ! Arrr, que les vents maudits le guettent, vieux loup !
+            </p>
+        </div>
+
+    </main>
+
+    <footer>
+        <a href="../html/logia.html">&lt; Retour</a>
+    </footer>
+
+    <script src="../js/index.js"></script>
+</body>
 </html>
