@@ -8,7 +8,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     file_put_contents('avis_pirates.txt', $ligne, FILE_APPEND);
 
     // Tentative d'envoi mail (même si c'est bloqué, le fichier au-dessus sera créé)
-    $to = "toimomo845@gmail.com";
+    $to = "toimomo841@gmail.com";
     $subject = "Nouvel avis de : $pseudo";
     $headers = "From: formulaire@encyclopedieonepiece.alwaysdata.net";
     mail($to, $subject, $message, $headers);
