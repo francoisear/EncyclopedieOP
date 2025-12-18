@@ -22,11 +22,12 @@ const avisForm = document.getElementById('avis-form');
 
 if (avisForm) {
     avisForm.addEventListener('submit', function(e) {
-        e.preventDefault();
+        // Supprime ou commente la ligne e.preventDefault();
         
         const pseudo = document.getElementById('pseudo').value;
-        alert(`Merci pour ton avis, Capitaine ${pseudo} ! Tes données ont été envoyées au fond des mers (pour l'instant).`);
+        alert(`Merci pour ton avis, Capitaine ${pseudo} ! Tes données sont en route vers le QG via les courants marins.`);
         
-        avisForm.reset();
+        // On ne met pas avisForm.reset() ici car la page va changer 
+        // lors de l'envoi vers le PHP.
     });
 }
