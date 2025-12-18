@@ -15,8 +15,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     // --- CETTE LIGNE EST TA ROUE DE SECOURS ---
     // Elle écrit l'avis dans un fichier avis.txt sur ton serveur
-    file_put_contents('avis.txt', "Date: ".date('d-m-Y H:i')." | Nom: $pseudo | Avis: $message" . PHP_EOL, FILE_APPEND);
-
+    file_put_contents('test_avis.txt', "Pseudo: $pseudo - Message: $message\n", FILE_APPEND);
     if(mail($to, $subject, $content, $headers)) {
         header("Location: index.html?envoi=reussi");
     } else {
