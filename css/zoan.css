@@ -1,107 +1,257 @@
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Georgia", serif;
-}
+/* ====== STYLE GLOBAL ====== */
 
 body {
-  min-height: 100vh;
-  background: url("../image/fond.jpg") center / cover no-repeat fixed;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
+    background: url("../image/zoan/ton-fond.jpg") no-repeat center center fixed;
+    background-size: cover;
+    color: #ffffff;
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
-.page-container {
-  width: 100%;
-  min-height: 100vh;
-  backdrop-filter: blur(6px);
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+.container, main {
+    max-width: 1200px;
+    margin: auto;
+    padding: 2rem 1rem;
 }
 
-.container {
-  text-align: center;
-  padding: 40px 20px;
-}
-
+/* ====== TITRE ====== */
 
 h1 {
-  font-size: 4rem;
-  letter-spacing: 6px;
-  margin-bottom: 30px;
-  text-transform: uppercase;
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    font-size: 90px;
+    font-weight: 900;
+    letter-spacing: 4px;
+    margin-bottom: 60px;
 }
 
+/* ====== MENU HAMBURGER ====== */
+
+.hamburger {
+    position: fixed;
+    top: 25px;
+    right: 25px;
+    width: 40px;
+    height: 30px;
+    cursor: pointer;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.hamburger span {
+    height: 4px;
+    width: 100%;
+    background-color: #ff0000; /* rouge */
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+/* MENU */
+.menu {
+    position: fixed;
+    top: 0;
+    right: -100%;
+    width: 260px;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.92);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    transition: 0.5s;
+    z-index: 999;
+}
+
+.menu a {
+    color: white;
+    font-size: 24px;
+    font-family: 'Inter', sans-serif;
+    text-decoration: none;
+}
+
+/* OUVERTURE MENU */
+#menu-toggle:checked ~ .menu {
+    right: 0;
+}
+
+/* ANIMATION CROIX */
+#menu-toggle:checked + .hamburger span:nth-child(1) {
+    transform: translateY(13px) rotate(45deg);
+}
+#menu-toggle:checked + .hamburger span:nth-child(2) {
+    opacity: 0;
+}
+#menu-toggle:checked + .hamburger span:nth-child(3) {
+    transform: translateY(-13px) rotate(-45deg);
+}
+
+/* ====== LISTE DES FRUITS ====== */
 
 .fruit-list {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  gap: 80px;
-  margin-bottom: 40px;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 120px;
+    flex-wrap: wrap;
+    padding: 0;
+    margin-bottom: 80px;
 }
 
 .fruit {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+    text-align: center;
+    max-width: 220px;
 }
 
-.fruit img {
-  width: 120px;
-  height: auto;
-  margin-bottom: 10px;
-  transition: transform 0.3s ease;
+.fruit-link {
+    text-decoration: none;
+    color: #ffffff;
+    font-family: 'Inter', sans-serif;
 }
 
-.fruit img:hover {
-  transform: scale(1.1);
+/* Conteneur image + texte overlay */
+.fruit-img-container {
+    position: relative;
+    display: inline-block;
+    width: 180px;
+    height: auto;
+    cursor: pointer;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
 }
 
-.fruit a {
-  color: white;
-  text-decoration: none;
-  font-size: 1.1rem;
+.fruit-img-container img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 12px;
 }
 
-.fruit a:hover {
-  text-decoration: underline;
+/* Texte en overlay sur l'image */
+.fruit-text {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    padding: 6px 12px;
+    border-radius: 10px;
+    font-family: 'Inter', sans-serif;
+    font-size: 18px;
+    white-space: nowrap;
+    pointer-events: none;
 }
 
-/* ===== TEXTE SUR PAPIER ===== */
+/* Effet hover sur image et texte */
+.fruit-img-container:hover {
+    transform: scale(1.05);
+}
+
+.fruit-img-container:hover .fruit-text {
+    background: rgba(255, 0, 0, 0.8);
+}
+
+/* ====== PARCHEMIN DESCRIPTION ====== */
+
+.parchemin {
+    position: relative; 
+    max-width: 1000px;
+    margin: 40px auto;
+}
+
+.papier {
+    width: 100%; 
+    height: auto; 
+    display: block;
+    filter: sepia(55%);
+    border-radius: 15px;
+}
+
 .description {
-  max-width: 800px;
-  margin: 0 auto;
-  padding: 30px 40px;
-  color: #2b2b2b;
-  font-style: italic;
-  line-height: 1.7;
-  background: #f7f7f7;
-  position: relative;
+    position: absolute; 
+    top: -13%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    
+    display: flex;
+    justify-content: center; 
+    align-items: center;    
 
-  /* effet papier */
-  clip-path: polygon(
-    0% 5%, 3% 0%, 97% 0%, 100% 6%,
-    97% 100%, 3% 100%, 0% 95%
-  );
+    font-family: 'Dancing Script', 'Reenie Beanie', cursive; 
+    font-size: 26px; 
+    line-height: 1.4;
+    color: #1a1a1a;
+    
+    padding: 40px 80px; 
+    box-sizing: border-box;
+    text-align: center; 
 }
 
-/* ===== FOOTER ===== */
+/* Supprimer tout fond noir ou background opaque autour de la description */
+.description, .Description {
+    background: transparent !important;
+    box-shadow: none !important;
+}
+
+/* ====== FOOTER ====== */
+
 .footer {
-  padding: 20px;
+    text-align: left;
+    padding: 30px;
 }
 
 .footer a {
-  color: white;
-  text-decoration: none;
-  font-size: 1rem;
+    font-family: 'Inter', sans-serif;
+    font-size: 32px;
+    color: white;
+    text-decoration: none;
+    opacity: 0.8;
+    transition: 0.3s;
 }
 
 .footer a:hover {
-  text-decoration: underline;
+    opacity: 1;
+    padding-left: 10px;
+}
+
+/* ====== RESPONSIVE MOBILE ====== */
+
+@media (max-width: 768px) {
+
+    h1 {
+        font-size: 42px;
+        margin-bottom: 40px;
+    }
+
+    .fruit-list {
+        gap: 50px;
+    }
+
+    .fruit-img-container {
+        width: 140px;
+    }
+
+    .Description {
+        font-size: 16px;
+        padding: 20px;
+        margin-bottom: 50px;
+        position: static;
+        top: auto;
+        left: auto;
+        height: auto;
+    }
+
+    .papier {
+        display: none; /* masque l'image parchemin sur mobile */
+    }
+
+    .footer a {
+        font-size: 22px;
+    }
 }

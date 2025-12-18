@@ -187,5 +187,10 @@ footer {
 
     .Retour {
         font-size: 24px;
+
+        body.dark-theme .Description,
+    .dark-theme .Description {
+        color: #ffffff !important;
     }
 }
+

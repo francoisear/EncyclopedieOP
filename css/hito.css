@@ -1,0 +1,261 @@
+/* Global styles */
+main {
+    max-width: 1200px;
+    margin: auto;
+    padding: 1em;
+}
+
+h1 {
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    font-size: 100px;
+    font-weight: 900;
+    color: #ffffff;
+}
+
+.textHito, .textChopper {
+    font-size: 24px;
+    font-family: 'Inter', sans-serif;
+    display: block;
+    margin-top: 15px;
+    font-weight: 300;
+    color: #ffffff;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:visited {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+/* Menu and Navigation */
+.menu {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.menu a {
+    font-size: 18px;
+    color: #ffffff;
+    font-family: 'Inter', sans-serif;
+    text-transform: uppercase;
+}
+
+.menu a:hover {
+    text-decoration: underline;
+}
+
+/* Fruit Image */
+.fruit-image {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+.fruit-image img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+/* Parchemin */
+.parchemin {
+    position: relative;
+    max-width: 1000px;
+    margin: 10px auto;
+}
+
+.papier {
+    width: 110%; 
+    height: auto; 
+    display: block;
+    filter: sepia(55%);
+}
+
+
+.description {
+    position: absolute;
+    top: -7%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Dancing Script', 'Reenie Beanie', cursive;
+    font-size: 26px;
+    line-height: 1.4;
+    color: #1a1a1a;
+    padding: 20px 60px;
+    box-sizing: border-box;
+    text-align: center;
+}
+/* ===== HAMBURGER (3 TRAITS ROUGES) ===== */
+
+.hamburger {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 30px;
+    cursor: pointer;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.hamburger span {
+    display: block;
+    height: 4px;
+    width: 100%;
+    background-color: red; /* ROUGE */
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+/* ===== MENU DÉROULANT ===== */
+
+.menu {
+    position: fixed;
+    top: 0;
+    right: -260px; /* caché au départ */
+    width: 260px;
+    height: 100vh; /* jusqu'en haut + bas */
+    background: rgba(0, 0, 0, 0.95);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    transition: 0.5s;
+    z-index: 999;
+}
+
+.menu a {
+    color: white;
+    font-size: 24px;
+    font-family: 'Inter', sans-serif;
+    text-decoration: none;
+}
+
+/* ===== OUVERTURE DU MENU ===== */
+
+#menu-toggle:checked ~ .menu {
+    right: 0;
+}
+
+/* ===== ANIMATION CROIX ===== */
+
+#menu-toggle:checked + .hamburger span:nth-child(1) {
+    transform: translateY(13px) rotate(45deg);
+}
+
+#menu-toggle:checked + .hamburger span:nth-child(2) {
+    opacity: 0;
+}
+
+#menu-toggle:checked + .hamburger span:nth-ch
+
+/* Footer */
+footer {
+    font-size: 40px;
+    font-family: 'Inter';
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+}
+
+.Retour {
+    font-family: 'Inter', sans-serif;
+    font-size: 34px;
+    color: #ffffff;
+    text-decoration: none;
+    opacity: 0.8;
+    transition: 0.3s;
+}
+
+.Retour:hover {
+    opacity: 1;
+    padding-left: 10px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    .description {
+        font-size: 18px;
+        width: 90%;
+        line-height: 1.2;
+    }
+
+    h1 {
+        font-size: 60px;
+    }
+
+    .menu {
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+@media (max-width: 768px) {
+
+    h1 {
+        font-size: 42px; 
+        margin-top: 70px;
+        padding: 0 10px;
+    }
+
+    
+    .parchemin .papier {
+        display: none;
+    }
+
+    
+    .parchemin {
+        position: static;      
+        margin: 20px auto;     
+        margin-top: 20px;      
+        width: 90%;            
+        background: rgba(0, 0, 0, 0.6); 
+        border-radius: 15px;   
+        padding: 20px;         
+        box-sizing: border-box;
+    }
+
+   
+    .Description {
+        position: static;      
+        font-family: 'Dancing Script', 'Reenie Beanie', 'cursive';  
+        font-size: 15px;       
+        line-height: 1.5;
+        color: #ffffff;        
+        text-align: center;
+        width: 100%;
+        height: auto;
+        padding: 0;           
+    }
+
+    
+    main > img {
+        display: block;
+        margin: 0 auto;
+        width: 220px;          
+        height: auto;
+    }
+
+    
+    footer {
+        padding: 10px;
+        text-align: left;
+    }
+
+    .Retour {
+        font-size: 24px;
+    }
+}
