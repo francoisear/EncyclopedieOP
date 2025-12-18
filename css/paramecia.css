@@ -90,7 +90,7 @@ ol li:hover img {
 
 .Description {
     position: absolute; 
-    top: 0;
+    top: -5%;
     left: 0;
     width: 100%;
     height: 100%;
@@ -151,7 +151,7 @@ footer {
     display: block;
     height: 4px;
     width: 100%;
-    background-color: #ffffff; /* Couleur des barres */
+    background-color: #000000; /* Couleur des barres */
     border-radius: 10px;
     transition: 0.3s;
 }
