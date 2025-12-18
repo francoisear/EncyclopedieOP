@@ -86,6 +86,7 @@ ol li:hover img {
     width: 100%; 
     height: auto; 
     display: block;
+    filter: sepia(55%);
 }
 
 .Description {
@@ -133,15 +134,14 @@ footer {
     padding-left: 10px;
 }
 
-/* Style du bouton Hamburger */
 .HAMBURGER {
-    position: fixed; /* Reste visible même au scroll */
+    position: fixed; 
     top: 20px;
     right: 20px;
     width: 40px;
     height: 30px;
     cursor: pointer;
-    z-index: 1000; /* Au-dessus de tout */
+    z-index: 1000; 
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -151,16 +151,16 @@ footer {
     display: block;
     height: 4px;
     width: 100%;
-    background-color: #000000; /* Couleur des barres */
+    background-color: #ffffff; 
     border-radius: 10px;
     transition: 0.3s;
 }
 
-/* Style du Menu (caché par défaut) */
+
 .menu {
     position: fixed;
     top: 0;
-    right: -100%; /* Sorti de l'écran à droite */
+    right: -100%; 
     width: 250px;
     height: 100vh;
     background: rgba(0, 0, 0, 0.9);
@@ -179,12 +179,12 @@ footer {
     font-family: 'Inter', sans-serif;
 }
 
-/* LOGIQUE D'AFFICHAGE (Quand on coche la checkbox) */
+
 #menu_toggle:checked ~ .menu {
-    right: 0; /* Le menu rentre dans l'écran */
+    right: 0; 
 }
 
-/* Animation des barres en "X" quand ouvert */
+
 #menu_toggle:checked + .HAMBURGER span:nth-child(1) {
     transform: translateY(13px) rotate(45deg);
 }
