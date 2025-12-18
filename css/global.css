@@ -108,3 +108,44 @@ video video {
     max-width: 90%;          /* S'adapte à la largeur de l'écran */
     height: auto;            /* Garde les bonnes proportions */
 }
+
+.avis-section {
+    max-width: 550px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #fdf5e6; /* Couleur crème parchemin */
+    border: 3px solid #5d4037; /* Marron bois */
+    border-radius: 8px;
+    box-shadow: 5px 5px 15px rgba(0,0,0,0.4);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #3e2723;
+}
+
+input[type="text"], textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #a1887f;
+    background: #fffaf0;
+    box-sizing: border-box; /* Évite que ça dépasse */
+}
+
+#submit-avis {
+    background-color: #ffcc00;
+    color: #000;
+    padding: 12px 25px;
+    border: 2px solid #3e2723;
+    font-weight: bold;
+    cursor: pointer;
+    width: 100%;
+}
+
+#submit-avis:hover {
+    background-color: #d4ac0d;
+}
