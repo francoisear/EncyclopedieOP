@@ -1,38 +1,50 @@
 <!DOCTYPE html>
 <html lang="fr">
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="../css/claire.css" id="themelink">
-        <link rel="stylesheet" href="../css/global.css">
-        <title> Beta Beta No mi </title>
-        <meta charset="utf-8">
-    </head>
-    <body>
-        <header>
-            <button id="themeselector" class="light-theme" type="button"> thème claire</button>
-            <h1> Beta Beta No mi </h1>
-        </header>
-        <main>
-            <img src="../image/paramecia/beta_beta-removebg-preview.png" width="400" height="400"> 
-            <p>     
-                Le Beta Beta No mi est un Fruit du démon de type Paramecia qui permet à son utilisateur de produire et de contrôler à volonté du mucus faisant de 
-                l'utilisateur un Homme-Mucus 
-            </p> 
-            <div class="hamburger" onclick="toggleMenu()">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-            <nav class="menu" id="menu">
-                <a href="../html/logia.html">LOGIA</a>
-                <a href="../html/paramecia.html">PARAMECIA</a>
-                <a href="../html/zoan.html">ZOAN</a>
-            </nav>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beta Beta No mi</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700;900&family=Dancing+Script:wght@500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/claire.css" id="themelink">
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../css/Gomu.css"> </head>
+<body>
+    <header>
+         <button id="themeselector" class="light-theme" type="button"> thème claire</button>
+         <h1>Beta Beta No mi</h1>
+    </header>
 
-        </main>
-        <footer>
-            <a href="../html/paramecia.html"> retour</a>
-        </footer>
-        <script src="../js/index.js"></script>
-    </body>
+    <main>
+        <input type="checkbox" id="menu_toggle" style="display:none;" />
+        <label class="HAMBURGER" for="menu_toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </label>
+
+        <nav class="menu" id="menu">
+            <a href="../index.html">ACCUEIL</a>
+            <a href="../html/logia.html">LOGIA</a>
+            <a href="../html/paramecia.html">PARAMECIA</a>
+            <a href="../html/zoan.html">ZOAN</a>
+        </nav>
+
+        <img src="../image/paramecia/beta_beta-removebg-preview.png" width="400" height="400" alt="Beta Beta No Mi">
+        
+        <div class="parchemin">  
+            <img class="papier" src="../image/paramecia/Papier.png" alt="parchemin">
+            <p class="Description">    
+                Le Beta Beta No mi est un Fruit du démon de type Paramecia qui permet à son utilisateur de produire et de contrôler à volonté du mucus, faisant de l'utilisateur un Homme-Mucus. Cette substance est extrêmement collante et hautement inflammable.
+            </p>
+        </div> 
+    </main>
+
+    <footer>
+        <a class="Retour" href="../html/paramecia.html">&lt; Retour</a>
+    </footer>
+
+    <script src="../js/index.js"></script>
+</body>
 </html>
