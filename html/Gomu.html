@@ -1,48 +1,54 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
+    <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="../css/claire.css" id="themelink">
-
-        <link rel="stylesheet" href="../css/claire.css">
-
         <link rel="stylesheet" href="../css/global.css">
-        <title> Gomu Gomu No mi </title>
+        <link rel="stylesheet" href="../css/Gomu.css">
+         <title> Gomu Gomu No mi </title>
         <meta charset="utf-8">
     </head>
-<body>
+    <body>
         <header>
              <button id="themeselector" class="light-theme" type="button"> thème claire</button>
              <h1> Gomu Gomu No mi </h1>
         </header>
         <main>
-             <img src="../image/paramecia/gum_gum.png" width="400" height="400">  
+            <!-- BOUTON HAMBURGER -->
+            <input type="checkbox" id="menu_toggle" style="display:none;" />
+            <label class="HAMBURGER" for="menu_toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+            </label>
 
-                
-             <p>
-                
-                Le Gomu Gomu No mi est un Fruit du démon de type Paramecia qui confère à son utilisateur les mêmes propriétés que le caoutchouc, ce qui fait du mangeur un homme élastique. Il y a 13 ans, le Gouvernement Mondial est entré en possession du fruit après près de 800 ans de chasse. Cependant, Shanks et son équipage l'ont volé à un convoi du Gouvernement Mondial, protégé par le CP9.[8][9] Le fruit a fini par être mangé par Monkey D. Luffy, le protagoniste de la série. Dans un restaurant au Village de Fuchsia, Luffy mange sans le savoir le Gomu Gomu no Mi, quand Luffy tente d'attaquer Shanks ce dernier saisit son bras. À la surprise générale, son bras s'est étiré.
+            <nav class="menu" id="menu">
+            <a href="../index.html">ACCUEIL</a>
+            <a href="../html/logia.html">LOGIA</a>
+            <a href="../html/paramecia.html">PARAMECIA</a>
+            <a href="../html/zoan.html">ZOAN</a>
+            </nav>
+            <img src="../image/paramecia/gum_gum.png" width="400" height="400">
+            
+            <div class="parchemin">  
+            <img class="papier" src="../image/paramecia/Papier.png" alt="parchemin">
+             <p class="Description">    
+                Le Gomu Gomu No mi est un Fruit du démon de type Paramecia qui confère à son utilisateur les mêmes propriétés que le caoutchouc, ce qui fait du mangeur 
+                un homme élastique. Il y a 13 ans, le Gouvernement Mondial est entré en possession du fruit après près de 800 ans de chasse. Cependant, Shanks et son 
+                équipage l'ont volé à un convoi du Gouvernement Mondial, protégé par le CP9. Le fruit a fini par être mangé par Monkey D. Luffy, le protagoniste 
+                de la série. Dans un restaurant au Village de Fuchsia, Luffy mange sans le savoir le Gomu Gomu no Mi, quand Luffy tente d'attaquer Shanks ce dernier saisit 
+                son bras. À la surprise générale, son bras s'est étiré.
              </p>
-<!-- BOUTON HAMBURGER -->
-<div class="hamburger" onclick="toggleMenu()">
-    <span></span>
-    <span></span>
-    <span></span>
-</div>
+            </div> 
+            </main>
 
-<!-- MENU -->
-<nav class="menu" id="menu">
-    <a href="../html/logia.html">LOGIA</a>
-    <a href="../html/paramecia.html">PARAMECIA</a>
-    <a href="../html/zoan.html">ZOAN</a>
-</nav>
+            <footer>
+            <a class="Retour" href="../html/paramecia.html">&lt; Retour</a>
+            </footer>
 
-        </main>
-        <footer>
-            <a href="../html/paramecia.html"> retour</a>
-        </footer>
-         <script src="../js/index.js"></script>
-     </body>
+    <script src="../js/index.js"></script>
+</body>
 </html>

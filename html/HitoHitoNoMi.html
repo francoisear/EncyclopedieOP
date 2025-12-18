@@ -2,19 +2,23 @@
 <html lang="fr">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Hito Hito No Mi </title>
-    <meta charset="utf-8">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="../css/claire.css" id="themelink">
     <link rel="stylesheet" href="../css/global.css">
-    <link rel="stylesheet" href="../css/fruits.css"> 
+    <link rel="stylesheet" href="../css/hito.css">
+    <title> Hito Hito No Mi </title>
+    <meta charset="utf-8">
 </head>
 <body>
     <header>
-        
+        <button id="themeselector" class="light-theme" type="button"> thème claire</button>
+        <h1> Hito Hito No Mi </h1>
+    </header>
+
+    <main>
+        <!-- BOUTON HAMBURGER -->
         <input type="checkbox" id="menu_toggle" style="display:none;" />
         <label class="HAMBURGER" for="menu_toggle">
             <span></span>
@@ -22,41 +26,27 @@
             <span></span>
         </label>
 
-      
-        <button id="themeselector" class="light-theme" type="button"> thème claire</button>
-    </header>
+        <nav class="menu" id="menu">
+            <a href="../index.html">ACCUEIL</a>
+            <a href="../html/logia.html">LOGIA</a>
+            <a href="../html/paramecia.html">PARAMECIA</a>
+            <a href="../html/zoan.html">ZOAN</a>
+        </nav>
 
-    <main>
-        <h1> Hito Hito No Mi </h1>
-
-        
         <div class="fruit-image">
             <img src="../image/zoan/hito_hito-removebg-preview.png" alt="Hito Hito No Mi" width="400" height="400">
         </div>
 
-     
         <div class="parchemin">
             <img class="papier" src="../image/paramecia/Papier.png" alt="parchemin">
             <p class="description">
                 Arrr, le Hito Hito no Mi, modèle Human, transforme un animal en humain ou en forme hybride ! Pour un animal, c’est un pouvoir puissant : marcher sur deux jambes, parler, vivre parmi les humains. Mais pour un humain, ça ne sert à rien. Ce fruit est aussi spécial car, avec un médicament, il permet de prendre jusqu’à huit formes différentes. Mais c’est un fruit assez limité pour un pirate en quête de puissance. Le détenteur actuel est Tony Tony Chopper, le docteur de l’Équipage du Chapeau de Paille. Grâce à ce fruit, il peut prendre plusieurs formes, dont une Monster Point qui lui donne une force impressionnante. Mais pour un vrai pirate, ce fruit reste plus pratique qu'un pouvoir de domination. Arrr !
             </p>
         </div>
-
-        <input type="checkbox" id="menu-toggle" style="display:none;" />
-<label class="hamburger" for="menu-toggle">
-    <span></span>
-    <span></span>
-    <span></span>
-</label>
-<nav class="menu">
-     <a href="../index.html">Acceuil</a>
-    <a href="../html/logia.html">LOGIA</a>
-    <a href="../html/paramecia.html">PARAMECIA</a>
-    <a href="../html/zoan.html">ZOAN</a>
     </main>
 
     <footer>
-        <a href="../html/zoan.html">Retour</a>
+        <a href="../html/zoan.html">&lt; Retour</a>
     </footer>
 
     <script src="../js/index.js"></script>
