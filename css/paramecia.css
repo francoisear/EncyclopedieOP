@@ -196,38 +196,37 @@ footer {
     transform: translateY(-13px) rotate(-45deg);
 }
 
+/* --- CONFIGURATION MOBILE --- */
+/* --- CONFIGURATION MOBILE (Moins de 768px) --- */
 @media (max-width: 768px) {
-    /* On réduit le titre pour laisser de la place au reste */
-    h1 {
-        font-size: 45px;
-        margin: 15px 0;
-    }
 
-    /* On réduit la taille des fruits */
-    ol li img {
-        max-width: 100px;
+    /* RÉDUIRE LE TITRE ICI */
+    h1 {
+        font-size: 35px;      /* On passe de 100px à 35px pour que ça tienne sur une ligne */
+        margin-top: 60px;     /* On ajoute un peu d'espace pour ne pas coller au haut de l'écran */
+        text-align: center;
     }
 
     .parchemin {
-        max-width: 95%;
-        margin: 10px auto;
+        position: static;     /* On annule le positionnement fixe */
+        margin: 20px auto;    /* Centre le bloc sous le fruit */
+        width: 90%;           /* Largeur responsive */
+        background: rgba(0, 0, 0, 0.5); /* Cadre noir transparent (50%) */
+        border-radius: 15px;  /* Bords arrondis pour le style */
+        padding: 20px;        /* Espace entre le texte et le bord du cadre */
+        box-sizing: border-box;
+    }
+
+    /* Rappel de la configuration pour le texte et le papier */
+    .parchemin .papier {
+        display: none;        /* Le papier disparaît */
     }
 
     .Description {
-        /* CLÉ 1 : On utilise une taille de police très petite et fluide */
-        font-size: clamp(10px, 3.8vw, 15px); 
-        
-        /* CLÉ 2 : On réduit drastiquement l'espace entre les lignes */
-        line-height: 1.1; 
-        
-        /* CLÉ 3 : On réduit les marges internes pour gagner de la place */
-        padding: 10px 35px; 
-        
-        /* CLÉ 4 : On repositionne au centre exact du papier réduit */
-        top: 0;
-        height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+        position: static;     /* Le texte reprend sa place normale */
+        font-size: 15px;      /* Texte plus petit comme demandé */
+        color: #ffffff;       /* Texte blanc pour être lisible sur le fond sombre */
+        padding: 15px;
+        text-align: center;
     }
 }

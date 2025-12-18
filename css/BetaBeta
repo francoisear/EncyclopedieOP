@@ -135,42 +135,56 @@ footer {
 /* --- ADAPTATION MOBILE (Moins de 768px) --- */
 @media (max-width: 768px) {
     
-    /* On réduit la taille du titre car 100px est trop large pour un téléphone */
     h1 {
-        font-size: 45px;
-        margin-top: 60px; /* Laisse de la place au bouton hamburger */
+        font-size: 42px; /* Taille réduite pour mobile */
+        margin-top: 70px;
+        padding: 0 10px;
     }
 
-    /* On réinitialise le positionnement du parchemin */
+    /* 1. On cache l'image physique du papier */
+    .parchemin .papier {
+        display: none;
+    }
+
+    /* 2. On transforme le conteneur en cadre noir transparent */
     .parchemin {
-        margin-left: auto; /* Centre le parchemin */
-        margin-right: auto;
-        margin-top: 20px;  /* On enlève le -22% pour qu'il s'affiche SOUS le fruit */
-        width: 95%;        /* Prend presque toute la largeur du téléphone */
+        position: static;      /* On annule le positionnement absolute/fixed */
+        margin: 20px auto;     /* Centre le bloc sous le fruit */
+        margin-top: 20px;      /* Remplace le -22% de la version PC */
+        width: 90%;            /* Largeur fluide pour téléphone */
+        background: rgba(0, 0, 0, 0.6); /* Ton cadre transparent (ajuste 0.6 pour l'opacité) */
+        border-radius: 15px;   /* Bords arrondis */
+        padding: 20px;         /* Espace entre le texte et le bord du cadre */
+        box-sizing: border-box;
     }
 
-    /* On ajuste l'image du papier */
-    .papier {
-        width: 100%;       /* Évite de déborder de l'écran */
-    }
-
-    /* On ajuste le texte à l'intérieur du parchemin */
+    /* 3. On ajuste le texte .Description pour qu'il soit blanc et lisible */
     .Description {
-        font-size: 14px;   /* On réduit la police pour que le texte rentre dans le papier */
-        padding: 15px 35px;
-        line-height: 1.2;
-        top: 0;            /* On recentre le texte verticalement */
+        position: static;      /* Il reprend sa place normale dans le flux */
+        font-family: 'Dancing Script', 'Reenie Beanie', cursive;  /* Plus lisible sur mobile que la cursive */
+        font-size: 15px;       /* Plus petit comme demandé */
+        line-height: 1.5;
+        color: #ffffff;        /* TEXTE BLANC sur le cadre noir */
+        text-align: center;
+        width: 100%;
+        height: auto;
+        padding: 0;            /* Le padding est géré par le parent .parchemin */
     }
 
-    /* On s'assure que l'image du fruit (hors du parchemin) n'est pas trop grande */
+    /* 4. Ajustement de l'image du fruit */
     main > img {
         display: block;
         margin: 0 auto;
-        width: 250px;      /* Taille réduite pour mobile */
+        width: 220px;          /* Image plus petite pour laisser de la place au texte */
         height: auto;
     }
 
-    /* On réduit le bouton retour */
+    /* 5. Bouton retour en bas à gauche */
+    footer {
+        padding: 10px;
+        text-align: left;
+    }
+
     .Retour {
         font-size: 24px;
     }
