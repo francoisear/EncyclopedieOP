@@ -1,0 +1,49 @@
+/* Container principal pour aligner image et texte */
+.fruit-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    max-width: 1100px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+/* Style de l'image */
+.fruit-image img {
+    max-width: 400px;
+    height: auto;
+    filter: drop-shadow(0 0 15px rgba(0,0,0,0.5));
+}
+
+/* Style du texte */
+.fruit-description p {
+    font-family: 'Inter', sans-serif;
+    font-size: 20px;
+    line-height: 1.6;
+    color: #ffffff;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.8);
+    max-width: 600px;
+}
+
+/* --- ADAPTATION MOBILE (RÉPARE TA CAPTURE D'ÉCRAN 2) --- */
+@media (max-width: 768px) {
+    .fruit-container {
+        flex-direction: column; /* Empile l'image et le texte verticalement */
+        text-align: center;
+        margin: 20px auto;
+    }
+
+    .fruit-image img {
+        max-width: 250px; /* Réduit l'image sur téléphone */
+    }
+
+    .fruit-description p {
+        font-size: 16px;
+        padding: 0 10px;
+    }
+
+    h1 {
+        font-size: 30px;
+    }
+}
