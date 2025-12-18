@@ -153,35 +153,3 @@ input[type="text"], textarea {
     background-color: #d4ac0d;
 }
 
-@media (max-width: 768px) {
-
-    /* RÉDUIRE LE TITRE ICI */
-    h1 {
-        font-size: 35px;      /* On passe de 100px à 35px pour que ça tienne sur une ligne */
-        margin-top: 60px;     /* On ajoute un peu d'espace pour ne pas coller au haut de l'écran */
-        text-align: center;
-    }
-
-    .parchemin {
-        position: static;     /* On annule le positionnement fixe */
-        margin: 20px auto;    /* Centre le bloc sous le fruit */
-        width: 90%;           /* Largeur responsive */
-        background: rgba(0, 0, 0, 0.5); /* Cadre noir transparent (50%) */
-        border-radius: 15px;  /* Bords arrondis pour le style */
-        padding: 20px;        /* Espace entre le texte et le bord du cadre */
-        box-sizing: border-box;
-    }
-
-    /* Rappel de la configuration pour le texte et le papier */
-    .parchemin .papier {
-        display: none;        /* Le papier disparaît */
-    }
-
-    .Description {
-        position: static;     /* Le texte reprend sa place normale */
-        font-size: 15px;      /* Texte plus petit comme demandé */
-        color: #ffffff;       /* Texte blanc pour être lisible sur le fond sombre */
-        padding: 15px;
-        text-align: center;
-    }
-}
