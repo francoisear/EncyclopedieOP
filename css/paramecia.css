@@ -20,6 +20,7 @@ h1 {
    margin-top: 15px;
    font-weight: 300;
    color: #ffffff;
+   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
 
 a {
@@ -86,6 +87,7 @@ ol li:hover img {
     width: 100%; 
     height: auto; 
     display: block;
+    filter: sepia(55%);
 }
 
 .Description {
@@ -105,11 +107,12 @@ ol li:hover img {
     line-height: 1.4;
     color: #1a1a1a;
     
-    padding: 20px 60px; 
+    
+    padding: 40px 80px; 
     box-sizing: border-box;
     text-align: center; 
 }
-    
+
 footer {
 
     font-size: 40px; 
@@ -132,13 +135,98 @@ footer {
     padding-left: 10px;
 }
 
+.HAMBURGER {
+    position: fixed; 
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 30px;
+    cursor: pointer;
+    z-index: 1000; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.HAMBURGER span {
+    display: block;
+    height: 4px;
+    width: 100%;
+    background-color: #ff0000; 
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+
+.menu {
+    position: fixed;
+    top: 0;
+    right: -100%; 
+    width: 250px;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    transition: 0.5s;
+    z-index: 999;
+}
+
+.menu a {
+    color: white;
+    font-size: 24px;
+    font-family: 'Inter', sans-serif;
+}
+
+
+#menu_toggle:checked ~ .menu {
+    right: 0; 
+}
+
+
+#menu_toggle:checked + .HAMBURGER span:nth-child(1) {
+    transform: translateY(13px) rotate(45deg);
+}
+#menu_toggle:checked + .HAMBURGER span:nth-child(2) {
+    opacity: 0;
+}
+#menu_toggle:checked + .HAMBURGER span:nth-child(3) {
+    transform: translateY(-13px) rotate(-45deg);
+}
+
+/* --- CONFIGURATION MOBILE --- */
+/* --- CONFIGURATION MOBILE (Moins de 768px) --- */
 @media (max-width: 768px) {
-    .Description {
-        font-size: 18px;
-        width: 90%;
-        line-height: 1.2;
-    }
+
+    /* RÉDUIRE LE TITRE ICI */
     h1 {
-        font-size: 60px;
+        font-size: 35px;      /* On passe de 100px à 35px pour que ça tienne sur une ligne */
+        margin-top: 60px;     /* On ajoute un peu d'espace pour ne pas coller au haut de l'écran */
+        text-align: center;
+    }
+
+    .parchemin {
+        position: static;     /* On annule le positionnement fixe */
+        margin: 20px auto;    /* Centre le bloc sous le fruit */
+        width: 90%;           /* Largeur responsive */
+        background: rgba(0, 0, 0, 0.5); /* Cadre noir transparent (50%) */
+        border-radius: 15px;  /* Bords arrondis pour le style */
+        padding: 20px;        /* Espace entre le texte et le bord du cadre */
+        box-sizing: border-box;
+    }
+
+    /* Rappel de la configuration pour le texte et le papier */
+    .parchemin .papier {
+        display: none;        /* Le papier disparaît */
+    }
+
+    .Description {
+        position: static;     /* Le texte reprend sa place normale */
+        font-size: 15px;      /* Texte plus petit comme demandé */
+        color: #ffffff;       /* Texte blanc pour être lisible sur le fond sombre */
+        padding: 15px;
+        text-align: center;
     }
 }
