@@ -1,7 +1,7 @@
 html, body {
     background-image: url("../image/mode_claire/one_piece_boat\(1\).jpg");
     background-position: center center;
-    background-attachment: scroll;
+    background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
     margin: 0;
