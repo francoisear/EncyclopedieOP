@@ -18,7 +18,7 @@ h1 {
 }
 
 p.Description, p {
-    color: #e0e0e0;
+    color: #ff0000;
     text-align: center;
     font-size: x-large;
 }
@@ -27,4 +27,18 @@ p.Description, p {
 .text, .text, .text {
     color: #ffcc00;
     font-weight: bold;
+}
+
+/* Hamburger en mode clair */
+.hamburger span {
+    display: block;
+    height: 4px;
+    background: #e9e8e8;  /* Gris clair pour le hamburger */
+    margin: 4px 0;
+    border-radius: 2px;
+}
+
+/* Hamburger en mode sombre */
+body.dark-theme .hamburger span {
+    background: #fff;  /* Blanc pour le hamburger en mode sombre */
 }
