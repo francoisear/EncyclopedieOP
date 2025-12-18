@@ -94,9 +94,25 @@
 }
 
 
+/* Conteneur pour centrer la vidéo */
+.video {
+    display: flex;
+    justify-content: center; /* Centre horizontalement */
+    align-items: center;     /* Centre verticalement si besoin */
+    margin: 30px 0;          /* Espace en haut et en bas */
+    width: 100%;
+}
 
+<<<<<<< HEAD
 
 <<<<<<< HEAD
 =======
 
 >>>>>>> 7a5f56307b7f395bbd325cbaf7d291f7f59084ad
+=======
+/* Style de la vidéo elle-même */
+video video {
+    max-width: 90%;          /* S'adapte à la largeur de l'écran */
+    height: auto;            /* Garde les bonnes proportions */
+}
+>>>>>>> 22c7d279a8257295837e1e96323cb82acdf780ba
