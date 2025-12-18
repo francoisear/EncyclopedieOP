@@ -28,10 +28,10 @@
     nav li {
         margin: 5px 0;
     }
-<<<<<<< Updated upstream
+
 }
-=======
-}
+
+
 /* Cacher la checkbox */
 #menu-toggle {
     display: none;
@@ -88,7 +88,5 @@
 }
 
 
-body {
-    border: 5px solid rgb(0, 0, 255);
-}
->>>>>>> Stashed changes
+
+
