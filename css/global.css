@@ -32,61 +32,66 @@
 }
 
 
-/* Cacher la checkbox */
-#menu-toggle {
-    display: none;
-}
-
-/* Hamburger (3 traits) */
-.hamburger {
-    position: fixed;
+.HAMBURGER {
+    position: fixed; 
     top: 20px;
     right: 20px;
-    width: 30px;
+    width: 40px;
     height: 30px;
     cursor: pointer;
-    z-index: 9999;
+    z-index: 1000; 
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
 }
 
-.hamburger span {
+.HAMBURGER span {
     display: block;
     height: 4px;
-    background: #000;
-    margin: 4px 0;
-    border-radius: 2px;
+    width: 100%;
+    background-color: #ffffff; 
+    border-radius: 10px;
+    transition: 0.3s;
 }
 
-/* Menu caché */
+
 .menu {
     position: fixed;
-    top: 60px;
-    right: 20px;
-    background: #222;
-    padding: 10px;
-    border-radius: 6px;
-    display: none; /* CACHÉ AU DÉPART */
+    top: 0;
+    right: -100%; 
+    width: 250px;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
     flex-direction: column;
-    z-index: 9998;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    transition: 0.5s;
+    z-index: 999;
 }
 
 .menu a {
     color: white;
-    text-decoration: none;
-    padding: 10px;
+    font-size: 24px;
+    font-family: 'Inter', sans-serif;
 }
 
-.menu a:hover {
-    background: #444;
+
+#menu_toggle:checked ~ .menu {
+    right: 0; 
 }
 
-/* Afficher le menu quand la checkbox est cochée */
-#menu-toggle:checked + .hamburger + .menu {
-    display: flex;
-}
 
+#menu_toggle:checked + .HAMBURGER span:nth-child(1) {
+    transform: translateY(13px) rotate(45deg);
+}
+#menu_toggle:checked + .HAMBURGER span:nth-child(2) {
+    opacity: 0;
+}
+#menu_toggle:checked + .HAMBURGER span:nth-child(3) {
+    transform: translateY(-13px) rotate(-45deg);
+}
 
 
 

@@ -151,7 +151,7 @@ footer {
     display: block;
     height: 4px;
     width: 100%;
-    background-color: #ffffff; 
+    background-color: #ff0000; 
     border-radius: 10px;
     transition: 0.3s;
 }
@@ -193,4 +193,40 @@ footer {
 }
 #menu_toggle:checked + .HAMBURGER span:nth-child(3) {
     transform: translateY(-13px) rotate(-45deg);
+}
+
+@media (max-width: 768px) {
+    /* On réduit le titre pour laisser de la place au reste */
+    h1 {
+        font-size: 45px;
+        margin: 15px 0;
+    }
+
+    /* On réduit la taille des fruits */
+    ol li img {
+        max-width: 100px;
+    }
+
+    .parchemin {
+        max-width: 95%;
+        margin: 10px auto;
+    }
+
+    .Description {
+        /* CLÉ 1 : On utilise une taille de police très petite et fluide */
+        font-size: clamp(10px, 3.8vw, 15px); 
+        
+        /* CLÉ 2 : On réduit drastiquement l'espace entre les lignes */
+        line-height: 1.1; 
+        
+        /* CLÉ 3 : On réduit les marges internes pour gagner de la place */
+        padding: 10px 35px; 
+        
+        /* CLÉ 4 : On repositionne au centre exact du papier réduit */
+        top: 0;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
 }
