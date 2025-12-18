@@ -90,7 +90,7 @@ ol li:hover img {
 
 .Description {
     position: absolute; 
-    top: -7%;
+    top: 0;
     left: 0;
     width: 100%;
     height: 100%;
@@ -105,11 +105,12 @@ ol li:hover img {
     line-height: 1.4;
     color: #1a1a1a;
     
-    padding: 20px 60px; 
+    
+    padding: 40px 80px; 
     box-sizing: border-box;
     text-align: center; 
 }
-    
+
 footer {
 
     font-size: 40px; 
@@ -132,13 +133,64 @@ footer {
     padding-left: 10px;
 }
 
-@media (max-width: 768px) {
-    .Description {
-        font-size: 18px;
-        width: 90%;
-        line-height: 1.2;
-    }
-    h1 {
-        font-size: 60px;
-    }
+/* Style du bouton Hamburger */
+.HAMBURGER {
+    position: fixed; /* Reste visible même au scroll */
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 30px;
+    cursor: pointer;
+    z-index: 1000; /* Au-dessus de tout */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.HAMBURGER span {
+    display: block;
+    height: 4px;
+    width: 100%;
+    background-color: #ffffff; /* Couleur des barres */
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+/* Style du Menu (caché par défaut) */
+.menu {
+    position: fixed;
+    top: 0;
+    right: -100%; /* Sorti de l'écran à droite */
+    width: 250px;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    transition: 0.5s;
+    z-index: 999;
+}
+
+.menu a {
+    color: white;
+    font-size: 24px;
+    font-family: 'Inter', sans-serif;
+}
+
+/* LOGIQUE D'AFFICHAGE (Quand on coche la checkbox) */
+#menu_toggle:checked ~ .menu {
+    right: 0; /* Le menu rentre dans l'écran */
+}
+
+/* Animation des barres en "X" quand ouvert */
+#menu_toggle:checked + .HAMBURGER span:nth-child(1) {
+    transform: translateY(13px) rotate(45deg);
+}
+#menu_toggle:checked + .HAMBURGER span:nth-child(2) {
+    opacity: 0;
+}
+#menu_toggle:checked + .HAMBURGER span:nth-child(3) {
+    transform: translateY(-13px) rotate(-45deg);
 }
