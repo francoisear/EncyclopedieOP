@@ -2,7 +2,7 @@
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $pseudo = htmlspecialchars($_POST['pseudo']);
     $message = htmlspecialchars($_POST['message']);
-    $to = "toimomo845@gmail.com"; 
+    $to = "toimomo841@gmail.com"; 
 
     $subject = "Nouvel avis de : $pseudo";
     
