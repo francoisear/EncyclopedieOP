@@ -186,84 +186,9 @@ footer {
     padding-left: 10px;
 }
 
-/* Media Queries */
-@media (max-width: 768px) {
-    .description {
-        font-size: 18px;
-        width: 90%;
-        line-height: 1.2;
-    }
-
-    h1 {
-        font-size: 60px;
-    }
-
-    .menu {
-        flex-direction: column;
-        gap: 10px;
-    }
-}
-
-@media (max-width: 768px) {
-
-    h1 {
-        font-size: 42px; 
-        margin-top: 70px;
-        padding: 0 10px;
-    }
-
-    
-    .parchemin .papier {
-        display: none;
-    }
-
-    
-    .parchemin {
-        position: static;      
-        margin: 20px auto;     
-        margin-top: 20px;      
-        width: 90%;            
-        background: rgba(0, 0, 0, 0.6); 
-        border-radius: 15px;   
-        padding: 20px;         
-        box-sizing: border-box;
-    }
-
-   
-    .Description {
-        position: static;      
-        font-family: 'Dancing Script', 'Reenie Beanie', 'cursive';  
-        font-size: 15px;       
-        line-height: 1.5;
-        color: #ffffff;        
-        text-align: center;
-        width: 100%;
-        height: auto;
-        padding: 0;           
-    }
-
-    
-    main > img {
-        display: block;
-        margin: 0 auto;
-        width: 220px;          
-        height: auto;
-    }
-
-    
-    footer {
-        padding: 10px;
-        text-align: left;
-    }
-
-    .Retour {
-        font-size: 24px;
-    }
-}
-
 /* --- ADAPTATION MOBILE (Moins de 768px) --- */
 @media (max-width: 768px) {
-
+    
     h1 {
         font-size: 42px; /* Taille réduite pour mobile */
         margin-top: 70px;
@@ -288,7 +213,7 @@ footer {
     }
 
     /* 3. On ajuste le texte .Description pour qu'il soit blanc et lisible */
-    .Description {
+    .description {
         position: static;      /* Il reprend sa place normale dans le flux */
         font-family: 'Dancing Script', 'Reenie Beanie', cursive;  /* Plus lisible sur mobile que la cursive */
         font-size: 15px;       /* Plus petit comme demandé */
@@ -316,5 +241,9 @@ footer {
 
     .Retour {
         font-size: 24px;
+
+
     }
 }
+
+

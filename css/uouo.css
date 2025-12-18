@@ -185,20 +185,64 @@ footer {
     padding-left: 10px;
 }
 
-/* Media Queries */
+/* --- ADAPTATION MOBILE (Moins de 768px) --- */
 @media (max-width: 768px) {
-    .description {
-        font-size: 18px;
-        width: 90%;
-        line-height: 1.2;
-    }
-
+    
     h1 {
-        font-size: 60px;
+        font-size: 42px; /* Taille réduite pour mobile */
+        margin-top: 70px;
+        padding: 0 10px;
     }
 
-    .menu {
-        flex-direction: column;
-        gap: 10px;
+    /* 1. On cache l'image physique du papier */
+    .parchemin .papier {
+        display: none;
+    }
+
+    /* 2. On transforme le conteneur en cadre noir transparent */
+    .parchemin {
+        position: static;      /* On annule le positionnement absolute/fixed */
+        margin: 20px auto;     /* Centre le bloc sous le fruit */
+        margin-top: 20px;      /* Remplace le -22% de la version PC */
+        width: 90%;            /* Largeur fluide pour téléphone */
+        background: rgba(0, 0, 0, 0.6); /* Ton cadre transparent (ajuste 0.6 pour l'opacité) */
+        border-radius: 15px;   /* Bords arrondis */
+        padding: 20px;         /* Espace entre le texte et le bord du cadre */
+        box-sizing: border-box;
+    }
+
+    /* 3. On ajuste le texte .Description pour qu'il soit blanc et lisible */
+    .description {
+        position: static;      /* Il reprend sa place normale dans le flux */
+        font-family: 'Dancing Script', 'Reenie Beanie', cursive;  /* Plus lisible sur mobile que la cursive */
+        font-size: 15px;       /* Plus petit comme demandé */
+        line-height: 1.5;
+        color: #ffffff;        /* TEXTE BLANC sur le cadre noir */
+        text-align: center;
+        width: 100%;
+        height: auto;
+        padding: 0;            /* Le padding est géré par le parent .parchemin */
+    }
+
+    /* 4. Ajustement de l'image du fruit */
+    main > img {
+        display: block;
+        margin: 0 auto;
+        width: 220px;          /* Image plus petite pour laisser de la place au texte */
+        height: auto;
+    }
+
+    /* 5. Bouton retour en bas à gauche */
+    footer {
+        padding: 10px;
+        text-align: left;
+    }
+
+    .Retour {
+        font-size: 24px;
+
+
     }
 }
+
+
