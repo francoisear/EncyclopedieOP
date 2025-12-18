@@ -1,18 +1,3 @@
-/*document.querySelector('#themeselector').addEventListener('click', () => {
-    let themelink = document.querySelector('#themelink');
-    let currentTheme = themelink.getAttribute('href');
-
-    let newTheme = '';
-    if (currentTheme.includes('sombre')){
-        newTheme = currentTheme.replace('sombre', 'claire');
-    } else{
-        newTheme = currentTheme.replace ('claire', 'sombre');
-
-    }
-
-    themelink.setAttribute('href', newTheme);
-}); LAISSE LE COMMENTAIRE */
-
 document.querySelector('#themeselector').addEventListener('click', () => {
     let themelink = document.querySelector('#themelink');
     let currentTheme = themelink.getAttribute('href');
@@ -32,3 +17,16 @@ document.querySelector('#themeselector').addEventListener('click', () => {
     themelink.setAttribute('href', newTheme);
     themeSelector.textContent = newButtonText;
 });
+
+const avisForm = document.getElementById('avis-form');
+
+if (avisForm) {
+    avisForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        const pseudo = document.getElementById('pseudo').value;
+        alert(`Merci pour ton avis, Capitaine ${pseudo} ! Tes données ont été envoyées au fond des mers (pour l'instant).`);
+        
+        avisForm.reset();
+    });
+}
