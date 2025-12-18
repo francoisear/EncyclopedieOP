@@ -1,10 +1,30 @@
 html, body {
     background-image: url("../image/mode_claire/one_piece_boat\(1\).jpg");
     background-position: center center;
-    background-attachment: scroll;
+    background-attachment: fixed;
     background-repeat: no-repeat;
     background-size: cover;
     margin: 0;
     height: 100%;
-
 }
+
+
+h1 {
+    color: #2c3e50; 
+    text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.8); 
+    text-align: center;
+    font-size: 3rem;
+}
+
+p.Description, p {
+   text-align: center;
+   font-size: x-large;
+}
+
+
+a {
+    color: #0056b3; 
+    text-decoration: underline;
+}
+
+

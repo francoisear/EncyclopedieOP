@@ -2,19 +2,21 @@
 <html lang="fr">
 <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<<<<<< Updated upstream
+        <link rel="stylesheet" href="../css/claire.css" id="themelink">
+=======
         <link rel="stylesheet" href="../css/claire.css">
+>>>>>>> Stashed changes
         <link rel="stylesheet" href="../css/global.css">
         <title> Mera Mera No Mi </title>
         <meta charset="utf-8">
     </head>
 <body>
         <header>
-            <!-- Menu -->
+             <button id="themeselector" class="light-theme" type="button"> thème claire</button>
              <h1> Mera Mera No Mi </h1>
         </header>
         <main>
-            <!-- page content-->
-              
         <img src="../image/logia/mera-removebg-preview.png" width="400" height="400">
     
          <p>
@@ -23,10 +25,24 @@
         un vrai diable de l’océan. Mais hélas, vieille branche… la triste vérité, c’est qu’ce fruit devait revenir à son frère disparu, Portgas D. Ace, le dernier 
         héritier du légendaire Roi des Pirates. Arrr, que les vents te soient favorables, moussaillon !
         </p>
+<!-- BOUTON HAMBURGER -->
+<div class="hamburger" onclick="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+
+<!-- MENU -->
+<nav class="menu" id="menu">
+    <a href="../html/logia.html">LOGIA</a>
+    <a href="../html/paramecia.html">PARAMECIA</a>
+    <a href="../html/zoan.html">ZOAN</a>
+</nav>
 
         </main>
         <footer>
             <a href="../html/logia.html"> Retour</a>
         </footer>
+         <script src="../js/index.js"></script>
      </body>
 </html>

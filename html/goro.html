@@ -2,19 +2,21 @@
 <html lang="fr">
 <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<<<<<<< Updated upstream
+        <link rel="stylesheet" href="../css/claire.css" id="themelink">
+=======
         <link rel="stylesheet" href="../css/claire.css">
+>>>>>>> Stashed changes
         <link rel="stylesheet" href="../css/global.css">
         <title> Goro Goro No Mi </title>
         <meta charset="utf-8">
     </head>
 <body>
         <header>
-            <!-- Menu -->
+             <button id="themeselector" class="light-theme" type="button"> thème claire</button>
              <h1> Goro Goro No Mi </h1>
         </header>
-        <main>
-            <!-- page content-->
-              
+        <main>           
         <img src="../image/logia/goro-removebg-preview.png" width="400" height="400">
     
          <p>
@@ -22,10 +24,24 @@
         volonté, arrr ! À l’heure qu’il est, c’est le terrifiant Enel, qui se prend pour un dieu de malheur, qui le brandit. Quant aux anciens détenteurs… personne 
         n’en sait rien, et depuis, plus une nouvelle de ce foutu Enel ! Arrr, que les vents maudits le guettent, vieux loup !
         </p>
+<!-- BOUTON HAMBURGER -->
+<div class="hamburger" onclick="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+
+<!-- MENU -->
+<nav class="menu" id="menu">
+    <a href="../html/logia.html">LOGIA</a>
+    <a href="../html/paramecia.html">PARAMECIA</a>
+    <a href="../html/zoan.html">ZOAN</a>
+</nav>
 
         </main>
         <footer>
             <a href="../html/logia.html"> Retour</a>
         </footer>
+        <script src="../js/index.js"></script>
      </body>
 </html>

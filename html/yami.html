@@ -1,20 +1,24 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
+<<<<<<< Updated upstream
+=======
         <link rel="stylesheet" href="../css/global.css">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="../css/claire.css">
+>>>>>>> Stashed changes
         <link rel="stylesheet" href="../css/global.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="../css/claire.css" id="themelink">
         <title> Yami Yami No Mi </title>
         <meta charset="utf-8">
     </head>
 <body>
         <header>
-            <!-- Menu -->
+            <button id="themeselector" class="light-theme" type="button"> thème claire</button>
              <h1> Yami Yami No Mi </h1>
         </header>
         <main>
-            <!-- page content-->
               
         <img src="../image/logia/yami-removebg-preview.png" width="400" height="400">
     
@@ -26,10 +30,24 @@
         du défunt Barbe Blanche, avant de le quitter pour fonder son propre bordel de navire et son équipage. Arrr, quelle traitrise ! Que les vents maudits l’accompagnent, 
         vieux loup !
         </p>
+<!-- BOUTON HAMBURGER -->
+<div class="hamburger" onclick="toggleMenu()">
+    <span></span>
+    <span></span>
+    <span></span>
+</div>
+
+<!-- MENU -->
+<nav class="menu" id="menu">
+    <a href="../html/logia.html">LOGIA</a>
+    <a href="../html/paramecia.html">PARAMECIA</a>
+    <a href="../html/zoan.html">ZOAN</a>
+</nav>
 
         </main>
         <footer>
             <a href="../html/logia.html"> Retour</a>
         </footer>
+         <script src="../js/index.js"></script>
      </body>
 </html>
