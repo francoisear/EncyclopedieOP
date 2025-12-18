@@ -1,0 +1,177 @@
+h1 {
+   text-align: center;
+   font-family: 'Inter', sans-serif;
+   font-size: 100px;
+   font-weight: 900;
+   color: #ffffff;
+   
+}
+
+.parchemin {
+    position: relative; 
+    max-width: 1000px;
+    margin: 40px auto;
+    margin-left: 350px;
+    margin-top: -22% ; 
+}
+
+.papier {
+    width: 110%; 
+    height: auto; 
+    display: block;
+    filter: sepia(55%);
+}
+
+.Description {
+    position: absolute; 
+    top: -7%;
+    left: 3%;
+    width: 100%;
+    height: 100%;
+    
+    display: flex;
+    justify-content: center; 
+    align-items: center;    
+    
+
+    font-family: 'Dancing Script', 'Reenie Beanie', cursive; 
+    font-size: 20px; 
+    line-height: 1.4;
+    color: #1a1a1a;
+    
+    
+    padding: 20px 50px; 
+    box-sizing: border-box;
+    text-align: center; 
+}
+
+
+footer {
+
+    font-size: 40px; 
+    font-family: 'Inter';
+    color: #ffffff;
+    padding: 20px;
+}
+
+.Retour {
+    font-family: 'Inter', sans-serif;
+    font-size: 34px;
+    color: #ffffff;
+    text-decoration: none;
+    opacity: 0.8;
+    transition: 0.3s;
+}
+
+.Retour:hover {
+    opacity: 1;
+    padding-left: 10px;
+}
+
+
+
+
+.HAMBURGER {
+    position: fixed; 
+    top: 20px;
+    right: 20px;
+    width: 40px;
+    height: 30px;
+    cursor: pointer;
+    z-index: 1000; 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.HAMBURGER span {
+    display: block;
+    height: 4px;
+    width: 100%;
+    background-color: #ff0000; 
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+
+.menu {
+    position: fixed;
+    top: 0;
+    right: -100%; 
+    width: 250px;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.9);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    transition: 0.5s;
+    z-index: 999;
+}
+
+.menu a {
+    color: white;
+    font-size: 24px;
+    font-family: 'Inter', sans-serif;
+}
+
+
+#menu_toggle:checked ~ .menu {
+    right: 0; 
+}
+
+
+#menu_toggle:checked + .HAMBURGER span:nth-child(1) {
+    transform: translateY(13px) rotate(45deg);
+}
+#menu_toggle:checked + .HAMBURGER span:nth-child(2) {
+    opacity: 0;
+}
+#menu_toggle:checked + .HAMBURGER span:nth-child(3) {
+    transform: translateY(-13px) rotate(-45deg);
+}
+
+/* --- ADAPTATION MOBILE (Moins de 768px) --- */
+@media (max-width: 768px) {
+    
+    /* On réduit la taille du titre car 100px est trop large pour un téléphone */
+    h1 {
+        font-size: 45px;
+        margin-top: 60px; /* Laisse de la place au bouton hamburger */
+    }
+
+    /* On réinitialise le positionnement du parchemin */
+    .parchemin {
+        margin-left: auto; /* Centre le parchemin */
+        margin-right: auto;
+        margin-top: 20px;  /* On enlève le -22% pour qu'il s'affiche SOUS le fruit */
+        width: 95%;        /* Prend presque toute la largeur du téléphone */
+    }
+
+    /* On ajuste l'image du papier */
+    .papier {
+        width: 100%;       /* Évite de déborder de l'écran */
+    }
+
+    /* On ajuste le texte à l'intérieur du parchemin */
+    .Description {
+        font-size: 14px;   /* On réduit la police pour que le texte rentre dans le papier */
+        padding: 15px 35px;
+        line-height: 1.2;
+        top: 0;            /* On recentre le texte verticalement */
+    }
+
+    /* On s'assure que l'image du fruit (hors du parchemin) n'est pas trop grande */
+    main > img {
+        display: block;
+        margin: 0 auto;
+        width: 250px;      /* Taille réduite pour mobile */
+        height: auto;
+    }
+
+    /* On réduit le bouton retour */
+    .Retour {
+        font-size: 24px;
+    }
+}
