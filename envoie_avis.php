@@ -1,24 +1,31 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Nettoyage des données pour éviter les failles
+    // Récupération et nettoyage des données
     $pseudo = htmlspecialchars($_POST['pseudo']);
     $message = htmlspecialchars($_POST['message']);
 
-    // Configuration de l'e-mail
-    $to = "ton-email@exemple.com"; // REMPLACE PAR TON ADRESSE
-    $subject = "Nouvel avis de Pirate : $pseudo";
-    $headers = "From: pirate-web@alwaysdata.net"; // Optionnel : l'expéditeur
+    // Ton adresse de réception
+    $to = "toimomo845@gmail.com"; 
 
-    $content = "Capitaine, un nouveau message est arrivé !\n\n";
+    $subject = "Nouvel avis de pirate : $pseudo";
+    
+    // Configuration spécifique pour Alwaysdata
+    // On utilise ton pseudo 'encyclopedieonepiece'
+    $headers = "From: formulaire@encyclopedieonepiece.alwaysdata.net" . "\r\n" .
+               "Reply-To: " . $to . "\r\n" .
+               "Content-Type: text/plain; charset=utf-8" . "\r\n" .
+               "X-Mailer: PHP/" . phpversion();
+
+    $content = "Moussaillon, tu as reçu un message !\n\n";
     $content .= "Nom du pirate : $pseudo\n";
-    $content .= "Message : $message\n";
+    $content .= "Message : $message";
 
     // Envoi du mail
     if(mail($to, $subject, $content, $headers)) {
-        // Redirection vers l'accueil après succès
-        header("Location: index.html?success=true");
+        // Redirection vers l'index après succès
+        header("Location: index.html?envoi=reussi");
     } else {
-        echo "Une tempête empêche l'envoi du message.";
+        echo "Erreur d'envoi. Vérifiez la configuration sur Alwaysdata.";
     }
 }
 ?>
